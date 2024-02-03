@@ -114,12 +114,18 @@ fieldset {
   border: none;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
   color: rgba(255, 255, 255, 0.70);
   font-family: "Fira Sans Condensed";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.search-form__textfield:focus {
+  outline: none;
 }
 
 .search-form__checkbox-list {
