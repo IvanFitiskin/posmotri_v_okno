@@ -108,6 +108,10 @@ fieldset {
   cursor: pointer;
 }
 
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #FFF;
+}
+
 .search-form__textfield {
   appearance: none;
   background-color: inherit;
