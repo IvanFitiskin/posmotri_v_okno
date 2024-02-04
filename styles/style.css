@@ -103,13 +103,9 @@ fieldset {
 }
 
 .search-form__label {
-  display: inline;
+  display: flex;
   width: fit-content;
   cursor: pointer;
-}
-
-.search-form__label:has(:focus-visible) {
-  outline: 1px solid #FFF;
 }
 
 .search-form__textfield {
@@ -118,14 +114,17 @@ fieldset {
   border: none;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
   color: rgba(255, 255, 255, 0.70);
   font-family: "Fira Sans Condensed";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.search-form__label:has(.search-form__textfield:active),
+.search-form__label:has(.search-form__textfield:focus) {
+  outline: 1px solid #fff;
 }
 
 .search-form__textfield:focus {
@@ -133,33 +132,41 @@ fieldset {
 }
 
 .search-form__checkbox-list {
+  display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
+  gap: 15px;
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
   width: 19px;
   height: 19px;
   margin-right: 5px;
   vertical-align: middle;
   border: 1px solid #FFF;
+  position: relative;
+  z-index: 0;
 }
 
-input[type='checkbox']:checked + span {
-  background-color: #FFF;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before,
+.search-form__checkbox:active + .search-form__pseudo-checkbox::before {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  inset: 1px 1px;
+  z-index: -1;
+  width: 15px;
+  height: 15px;
 }
 
-span.search-form__label-text:first-child {
-  color: rgba(255, 255, 255, 0.70);
-  font-family: "Fira Sans Condensed";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+.search-form__checkbox:hover ~ .search-form__label-text {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.search-form__label:has(.search-form__checkbox:focus-visible) {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
 }
 
 .button {
@@ -173,6 +180,24 @@ span.search-form__label-text:first-child {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background: #545050;
+  text-decoration: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button {
