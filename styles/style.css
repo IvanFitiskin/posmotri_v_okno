@@ -230,10 +230,32 @@ fieldset {
 .content__list {
   overflow-y: auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
 
 .content__list-item {
-  padding-bottom: 36px;
+  padding: 2px 2px 2px 0;
+}
+
+.content__card-link {
+  display: block;
+}
+
+.content__card-link:active,
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 0;
 }
 
 .content__video-card {
@@ -257,6 +279,7 @@ fieldset {
 
 .content__card-link {
   text-decoration: none;
+  margin: 1px;
 }
 
 .content__video-card-description {
