@@ -94,10 +94,8 @@ fieldset {
 .search-form__fieldset-title {
   padding-bottom: 5px;
   color: #fff;
-  font-family: "Fira Sans Condensed";
   font-weight: 400;
   font-size: 18px;
-  font-style: normal;
   line-height: normal;
 }
 
@@ -113,7 +111,6 @@ fieldset {
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  overflow: visible;
   color: rgba(255, 255, 255, 0.7);
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
@@ -121,7 +118,6 @@ fieldset {
   font-style: normal;
   line-height: normal;
   background-color: inherit;
-  appearance: none;
   appearance: none;
 }
 
@@ -175,7 +171,7 @@ fieldset {
   border: 1px solid #fff;
   color: #fff;
   font-family: inherit;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
@@ -210,14 +206,15 @@ fieldset {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 19px;
   width: 100%;
   height: 100%;
 }
 
 .title {
+  padding-top: 4px;
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -233,7 +230,7 @@ fieldset {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 30px;
   overflow-y: auto;
 }
 
@@ -263,30 +260,35 @@ fieldset {
 .content__video-card {
   display: flex;
   justify-content: space-between;
-}
-
-.content__video-card-description-container {
-  width: 100%;
+  width: 394px;
+  height: 107px;
 }
 
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
   line-height: 100%;
   text-transform: uppercase;
+  padding-bottom: 6px;
 }
 
 .content__card-link {
   margin: 1px;
+  width: 392px;
+  height: 105px;
   text-decoration: none;
+}
+
+.content__video-card-description-container {
+  width: 199px;
 }
 
 .content__video-card-description {
   color: #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -294,8 +296,10 @@ fieldset {
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
+  width: 193px;
+  height: 105px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .content__list-item:last-of-type {
