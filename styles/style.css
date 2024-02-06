@@ -234,9 +234,9 @@ fieldset {
 
 .content__card-link {
   display: block;
-  margin: 1px;
   width: 392px;
   height: 105px;
+  margin: 1px;
   text-decoration: none;
 }
 
@@ -263,6 +263,7 @@ fieldset {
 }
 
 .content__video-card-title {
+  padding-bottom: 6px;
   color: #fff;
   font-family: Oswald, sans-serif;
   font-weight: 700;
@@ -270,7 +271,6 @@ fieldset {
   font-style: normal;
   line-height: 100%;
   text-transform: uppercase;
-  padding-bottom: 6px;
 }
 
 .content__video-card-description-container {
